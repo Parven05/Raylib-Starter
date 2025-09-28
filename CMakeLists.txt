@@ -1,8 +1,15 @@
 cmake_minimum_required(VERSION 3.16)
+
+# C based Project
+#project(main C)
 project(main CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# C standard
+#set(CMAKE_C_STANDARD 99)
+#set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # Find raylib
 find_package(raylib REQUIRED)
@@ -12,6 +19,9 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 # Collect all cpp files in src/
 file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.cpp)
+
+# Collect all .c files in src/
+#file(GLOB SRC_FILES ${CMAKE_SOURCE_DIR}/src/*.c)
 
 # Create executable from sources
 add_executable(${PROJECT_NAME} ${SRC_FILES})

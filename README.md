@@ -14,7 +14,7 @@ sudo pacman -S base-devel cmake raylib
 ## Usage
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/Raylib-Starter.git
+git clone https://github.com/Parven05/Raylib-Starter.git
 ```
 2. Build & Run
 ```bash
